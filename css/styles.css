@@ -1,0 +1,138 @@
+body {
+    background: #efdec1;
+    font-size: 18px;
+    font-family: Verdana, sans-serif;
+    background-image: url(../images/image01.webp);
+    background-size: cover;
+  }
+  
+  h1 {
+      text-align: center;
+      margin-top: 30px;
+      font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'Hiragino Mincho ProN', 'HGS明朝E', 'ＭＳ Ｐ明朝', serif;
+      position: relative;
+      padding: 1.5rem 2rem;
+      -webkit-box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
+      box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
+    }
+    
+    h1:before,
+    h1:after {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      content: '';
+      background-image: -webkit-linear-gradient(315deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
+      background-image: linear-gradient(135deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
+    }
+    
+    h1:before {
+      top: 0;
+    }
+    
+    h1:after {
+      bottom: 0;
+    }
+
+  .container {
+    width: 500px;
+    margin: 8px auto;
+    background: #fff;
+    border-radius: 4px;
+    padding: 16px;
+    opacity: 0.8;
+  }
+  
+  #question {
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  #choices {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+  
+  #choices li {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  #choices li:hover {
+    background: #f8f8f8;
+  }
+
+  #choices li.wrong{
+    background-color: red;
+    color: #f5cbf5;
+    font-weight: bold;
+    border-color: red;
+  }
+
+  #choices li.correct::after{
+    content:"...corect!!";
+  }
+
+
+  #choices li.correct{
+    background-color: #c3e6cb;
+    color: #155724;
+    font-weight: bold;
+    border-color: #c3e6cb;
+  }
+
+  #choices li.wrong::after{
+    content: "...wrong!!";
+  }
+
+  
+  #btn,#result a{
+    background: #3498db;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 0 #2880b9;
+  }
+  
+  #btn.disabled {
+    background: #ccc;
+    box-shadow: 0 4px 0 #bbb;
+    opacity: 0.7;
+  } 
+
+  #result{
+    position:absolute;
+    width: 300px;
+    background-image: url(../images/image.webp);
+    background-size:cover;
+    padding: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top:50px;
+    right: 0;
+    left:0;
+    margin: 0 auto;
+    border-radius: 4px;
+    text-align: center;
+    transition: 0.4s;
+  }
+
+  #result.hidden{
+    transform:translateY(-500px);
+  }
+
+  #result p{
+    font-size: 32px;
+    color: #fff;
+  }
+
+  #result a{
+    display: block;
+    text-decoration: none;
+  }
